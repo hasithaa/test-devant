@@ -1,4 +1,4 @@
 
 configurable VendorConfig vendorConfig = ?;
 
-configurable string sftpConfig = ?;
+configurable string sftpConfig = "hello";
