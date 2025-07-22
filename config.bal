@@ -1,4 +1,4 @@
 
-configurable SFTPConfig[] sftpConfigs = [];
+configurable SFTPConfig[] sftpConfigs = ?;
 
 configurable string sftpConfig = ?;
