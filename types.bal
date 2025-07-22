@@ -8,11 +8,18 @@ type SFTPConfig record {
 };
 
 
+## Vendor and VendorConfig records
+
 type Vendor record {|
+    # Vendor ID
     string id;
+    # Vendor name
     string name;
+    # Vendor contact details
     string email;
+    # Vendor phone number
     string phone;
+    # SFTP configuration for the vendor
     SFTPConfig sftpConfig;
 |};
 
