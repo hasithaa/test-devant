@@ -10,11 +10,12 @@ public function main() returns error? {
     io:println("Hello, World!");
     io:println("Service URL: ", serviceurl);
     io:println("Choreo API Key: ", choreoapikey);
+    map<string|string[]> headers = {};
 
     http:Client httpClient = check new (serviceurl);
-    map<string|string[]>? headers = {
-        "Choreo-API-Key": choreoapikey
-    };
+    if choreoapikey != "" {
+        headers["Choreo-API-Key"] = choreoapikey;
+    }
     // Provide the correct resource path
     http:Response payload = check httpClient->get(servicePath + "?message=Hello", headers);
     string response = check payload.getTextPayload();
