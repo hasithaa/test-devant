@@ -1,3 +1,4 @@
+import ballerina/http;
 import ballerina/io;
 import ballerina/os;
 
@@ -8,4 +9,12 @@ public function main() returns error? {
     io:println("Hello, World!");
     io:println("Service URL: ", serviceurl);
     io:println("Choreo API Key: ", choreoapikey);
+
+    http:Client httpClient = check new (serviceurl);
+    http:Request req = new;
+    req.setHeader("Choreo-API-Key", choreoapikey);
+    // Provide the correct resource path
+    http:Response payload = check httpClient->get("/echo?message=Hello%20from%20Ballerina");
+    string response = check payload.getTextPayload();
+    io:println("Response from echo service: ", response);
 }
