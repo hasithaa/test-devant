@@ -1,7 +1,7 @@
 schemaVersion: 1.2
 dependencies:
   connectionReferences:
-    - name: echo
+    - name: echo1
       resourceRef: service:/demochoreo/echoservice/v1/9ef33/PROJECT
 
 configurations:
@@ -15,7 +15,7 @@ configurations:
         # +required Choreo connection value source
         connectionRef:
           # +required Choreo connection name to refer the value from
-          name: echo
+          name: echo1
           # +required Choreo connection configuration key to refer the value from
           key: ServiceURL
     - name: DB_USER

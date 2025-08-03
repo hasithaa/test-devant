@@ -1,8 +1,8 @@
 import ballerina/io;
 import ballerina/os;
 
-configurable string serviceurl = os:getEnv("CHOREO_ECHO_SERVICEURL");
-configurable string choreoapikey = os:getEnv("CHOREO_ECHO_CHOREOAPIKEY");
+string serviceurl = os:getEnv("CHOREO_ECHO1_SERVICEURL");
+string choreoapikey = os:getEnv("CHOREO_ECHO1_CHOREOAPIKEY");
 
 public function main() returns error? {
     io:println("Hello, World!");
