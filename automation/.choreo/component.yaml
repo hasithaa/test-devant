@@ -1,8 +1,8 @@
 schemaVersion: "1.2"
 dependencies:
     serviceReferences:
-        - name: choreo:///hasitha/demochoreo/echoservice/9ef33/v1/PROJECT
-          connectionConfig: 01f0706a-de7c-107e-9d79-0dd6c05740b3
+        - name: choreo:///hasitha/demochoreo/echoservice/2618a/v1/PROJECT
+          connectionConfig: 01f07072-205c-17c0-9827-1efdfd333818
           env:
             - from: ServiceURL
               to: CHOREO_ECHO1_SERVICEURL
