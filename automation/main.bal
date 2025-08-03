@@ -4,6 +4,7 @@ import ballerina/os;
 
 string serviceurl = os:getEnv("CHOREO_ECHO1_SERVICEURL");
 string choreoapikey = os:getEnv("CHOREO_ECHO1_CHOREOAPIKEY");
+configurable string servicePath = "/abc/echo";
 
 public function main() returns error? {
     io:println("Hello, World!");
@@ -14,7 +15,7 @@ public function main() returns error? {
     http:Request req = new;
     req.setHeader("Choreo-API-Key", choreoapikey);
     // Provide the correct resource path
-    http:Response payload = check httpClient->get("/echo?message=Hello%20from%20Ballerina");
+    http:Response payload = check httpClient->get(servicePath + "?message=Hello");
     string response = check payload.getTextPayload();
     io:println("Response from echo service: ", response);
 }
