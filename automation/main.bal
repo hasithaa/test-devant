@@ -2,7 +2,7 @@ import ballerina/http;
 import ballerina/io;
 import ballerina/os;
 
-string serviceurl = os:getEnv("CHOREO_ECHO1_SERVICEURL");
+configurable string serviceurl = os:getEnv("CHOREO_ECHO1_SERVICEURL");
 string choreoapikey = os:getEnv("CHOREO_ECHO1_CHOREOAPIKEY");
 configurable string servicePath = "/abc/echo";
 
